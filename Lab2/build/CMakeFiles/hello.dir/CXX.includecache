@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jaret/jav76/Labs/Lab2/hello.cpp
+hello.hpp
+/home/jaret/jav76/Labs/Lab2/hello.hpp
+iostream
+-
+
+/home/jaret/jav76/Labs/Lab2/hello.hpp
+
+/home/jaret/jav76/Labs/Lab2/main.cpp
+hello.hpp
+/home/jaret/jav76/Labs/Lab2/hello.hpp
+
