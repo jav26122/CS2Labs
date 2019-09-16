@@ -1,0 +1,6 @@
+/home/jaret/jav76/Labs/Lab3/build/CMakeFiles/rebuild_cache.dir
+/home/jaret/jav76/Labs/Lab3/build/CMakeFiles/edit_cache.dir
+/home/jaret/jav76/Labs/Lab3/build/CMakeFiles/bug1.dir
+/home/jaret/jav76/Labs/Lab3/build/CMakeFiles/printout.dir
+/home/jaret/jav76/Labs/Lab3/build/CMakeFiles/bug3.dir
+/home/jaret/jav76/Labs/Lab3/build/CMakeFiles/bug2.dir

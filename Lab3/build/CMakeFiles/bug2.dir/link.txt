@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -Wall  -rdynamic CMakeFiles/bug2.dir/bug2.cpp.o  -o bug2 
