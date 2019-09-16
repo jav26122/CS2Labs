@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jaret/jav76/Labs/Lab7/algo.hpp
+iostream
+-
+iterator
+-
+
+/home/jaret/jav76/Labs/Lab7/main.cpp
+iostream
+-
+algo.hpp
+/home/jaret/jav76/Labs/Lab7/algo.hpp
+

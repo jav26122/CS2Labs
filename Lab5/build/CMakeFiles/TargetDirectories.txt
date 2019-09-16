@@ -1,0 +1,4 @@
+/home/jaret/jav76/Labs/Lab5/build/CMakeFiles/rebuild_cache.dir
+/home/jaret/jav76/Labs/Lab5/build/CMakeFiles/edit_cache.dir
+/home/jaret/jav76/Labs/Lab5/build/CMakeFiles/run.dir
+/home/jaret/jav76/Labs/Lab5/build/CMakeFiles/printout.dir

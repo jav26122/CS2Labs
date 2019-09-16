@@ -1,0 +1,115 @@
+Notes text file
+
+Question 1: Compile and run your program. Explain the behavior.
+The program printed 4 outputs:
+Default ctor: 0x7ffe497e7306
+Default ctor: 0x7ffe497e7307
+dtor: 0x7ffe497e7307
+dtor: 0x7ffe497e7306
+
+Which is to be expected, since it's just printing out the addresses of the 2 new objects that it created. 
+
+Question 2: Compile and run your program. Explain the behavior.
+The program produces this output:
+Default ctor: 0x7fff4ce09ba5
+Default ctor: 0x7fff4ce09ba6
+Default ctor: 0x7fff4ce09ba7
+dtor: 0x7fff4ce09ba7
+dtor: 0x7fff4ce09ba6
+dtor: 0x7fff4ce09ba5
+
+The difference between them is that in the test 1, 2 objects are created. But in the function for test 2, 3 objects are created.
+This you can clearly see from the addresses in the output. 
+
+
+Question 3: im not going to keep writing the question.
+Default ctor: 0x7ffc08684f74
+Default ctor: 0x7ffc08684f75
+dtor: 0x7ffc08684f77
+dtor: 0x7ffc08684f76
+dtor: 0x7ffc08684f75
+dtor: 0x7ffc08684f74
+
+This one is interesting since the constructor is being called twice, but the destructor 4 times. I think this is because the pair struct creates 2 regular_types at once, so the memory is allocated together. Since p2 is just assigned to p1, it takes up that memory instead of allocating new memory. 
+
+Question 4:
+Of course they're all the same? I don't really understand what the question is here. We're printing out the address from the constructor and then the address of the objet(the same thing?...)  and then of course the destructor is from that same object.
+And the member function of that object has the same address. This is pretty straight forward.
+
+Question 5:
+Default ctor: 0x7fff459eb0a4
+copy ctor: 0x7fff459eb0a5
+copy ctor: 0x7fff459eb0a6
+copy ctor: 0x7fff459eb0a7
+dtor: 0x7fff459eb0a7
+dtor: 0x7fff459eb0a6
+dtor: 0x7fff459eb0a5
+dtor: 0x7fff459eb0a4
+Assign isn't printed because the assignment = operator isn't ever used. The copy constructor is, for b = a. But there's nothing like b = a = c, so it isn't used.
+
+
+Question 6:
+Default ctor: 0x7ffc35ee244f
+Default ctor: 0x7ffc35ee2455
+Default ctor: 0x7ffc35ee2456
+Default ctor: 0x7ffc35ee2457
+copy assign: 0x7ffc35ee2455
+copy assign: 0x7ffc35ee2456
+copy assign: 0x7ffc35ee2457
+dtor: 0x7ffc35ee2457
+dtor: 0x7ffc35ee2456
+dtor: 0x7ffc35ee2455
+dtor: 0x7ffc35ee244f
+So here, the type x is created, which is the ...224f, then 3 regular types are created which are the addresses
+ ...2455 - ...2457
+Then for each of the 3 types created, the assignment operator is called. Then the dustructor is called for all 4 objects.
+
+Question 7:
+Default ctor: 0x7ffdb4f54ff5
+copy ctor: 0x7ffdb4f54ff6
+copy ctor: 0x7ffdb4f54ff7
+copy assign: 0x7ffdb4f54ff6
+dtor: 0x7ffdb4f54ff7
+dtor: 0x7ffdb4f54ff6
+dtor: 0x7ffdb4f54ff5
+For this function, the type is immediately copied using the default constructor. The next line basically does the same thing except it assigns the type to the previous type. Then that type b is assigned to what was already created.
+
+
+Question 8:
+Default ctor: 0x7ffc6cb5ca55
+Default ctor: 0x7ffc6cb5ca56
+before input_1
+copy ctor: 0x7ffc6cb5ca57
+input_1
+dtor: 0x7ffc6cb5ca57
+after input_1
+dtor: 0x7ffc6cb5ca56
+dtor: 0x7ffc6cb5ca55
+The addresses are the same because the objects just keep getting passed around. There's a temporary address in there because of the object not passed by reference. This is why passing by reference is more efficient.
+
+Question 9: (By the way I realize these addresses are meaningless I'm just writting them here to keep track and explain)
+before output_1
+output_1
+Default ctor: 0x7ffdb8dd9f15
+after output_1
+before output_2
+output_2
+Default ctor: 0x557898a16139
+copy ctor: 0x7ffdb8dd9f16
+after output_2
+before output_2
+output_2
+copy ctor: 0x7ffdb8dd9f17
+copy assign: 0x7ffdb8dd9f16
+dtor: 0x7ffdb8dd9f17
+after output_2
+dtor: 0x7ffdb8dd9f16
+dtor: 0x7ffdb8dd9f15
+dtor: 0x557898a16139
+The main difference here between the two is that in output 2 the type is static so it's only allocated once and then kept along for the rest of the program. 
+The copy constructor is called for output 2 because it's copying from the static object that's already created. 
+
+
+
+
+
